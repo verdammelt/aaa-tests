@@ -1,13 +1,13 @@
-const path = require('path');
+const path = require("path");
 
 module.exports = {
-  mode: 'development',
+  mode: "development",
 
-  entry: './src/index',
+  entry: "./src/index",
 
   output: {
-    filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    filename: "[name].bundle.js",
+    path: path.resolve(__dirname, "dist")
   },
 
   module: {
@@ -15,10 +15,10 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
+        loader: "babel-loader",
 
         options: {
-          presets: ['env']
+          presets: ["env"]
         }
       }
     ]
