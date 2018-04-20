@@ -8,9 +8,11 @@
   },
   "main": "index.js",
   "scripts": {
+    "prebuild": "npm run lint",
     "build": "webpack",
     "lint": "eslint --format unix .eslintrc.js webpack.config.js src/**",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "pretest": "npm run build",
+    "test": "node dist/test.bundle.js"
   },
   "keywords": [
     "test"
